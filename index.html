@@ -3,24 +3,63 @@
     <head>
         <title>Prayer Generator</title>
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
-        
+
         <style>
+            @media screen and (min-width: 700px) {
+                body {
+                    width: 600px;
+                    font-size: 28px;
+                }
+                button {
+                    font-size: 24px; 
+                }
+                p {
+                    width: 125px;
+                }
+                .selections button {
+                    font-size: 16px;
+                }
+                
+                
+            }
+            @media screen and (max-width: 699px) {
+                body {
+                    width: 100%;
+                    font-size: 22px;
+                }
+                button {
+                    font-size: 20px;
+                }
+                p {
+                    width: 90px;
+                }
+                .selections button {
+                    font-size: 14px;
+                }
+                .main-content {
+                    padding: 7.14%;
+                }
+            }
+            html {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                min-height: 420px;
+            }
             body {
                 font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                font-size: 28px;
                 color: black;
                 background-color: #eeeeee;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%,-50%);
+                display: flex;
             }
             button {
                 padding: 25px;
                 font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
                 background-color: rgb(110,155,248);
                 color: white;
-                font-size: 24px; 
+                
                 border: none;
                 border-radius: 20px;
                 cursor: pointer;
@@ -38,11 +77,11 @@
                 flex-grow: 2;
                 flex-direction: column;
                 width: 500px;
-                padding: 50px;
+                
             }
             p {
                 display: inline-block;
-                width: 125px;
+                
                 margin: 10px;
             }
             .selections {
@@ -63,7 +102,7 @@
                 display: inline-block;
                 margin: 10px;
                 flex-grow: 1;
-                font-size: 16px;
+                
                 font-weight: bold;
                 padding: 15px 0 15px 0;
                 color: rgb(110,155,248);
@@ -106,9 +145,7 @@
                 <button id="2">Ward</button>
                 <button id="3">Coordinating</button>
             </div>            
-            <button onclick="runPrayer()">Who's Gonna Say It?</button>
-
-            
+            <button onclick="runPrayer()">Who's Gonna Say It?</button>     
         </div>
 
         <script>
